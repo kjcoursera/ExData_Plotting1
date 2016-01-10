@@ -12,11 +12,12 @@ DATE2 <- as.Date("02/02/2007", format='%d/%m/%Y')
 
 dataToUse <- data[data$Date >= DATE1 & data$Date <= DATE2,] 
 
-#GlobalActivePower <- as.numeric(dataToUse$Global_active_power)
 
 # Plotting
-
+#opening the graphics device
 png("plot2.png", width=480, height=480)
-plot(dataToUse$Time , dataToUse$Global_active_power,type = "l" ,ylab = "Global Active Power (kilowatts)")
 
+plot(dataToUse$Time , dataToUse$Global_active_power,type = "l" ,ylab = "Global Active Power (kilowatts)" )
+
+# closing the graphical device
 dev.off()

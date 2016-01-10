@@ -14,10 +14,13 @@ dataToUse <- data[data$Date >= DATE1 & data$Date <= DATE2,]
 
 
 #plotting
-
+#opening the graphics device
 png("plot3.png", width=480, height=480)
-plot(dataToUse$Time,dataToUse$Sub_metering_1,type = "l", col = "black", xlab = "", ylab = "Energy sub metering")
-lines(dataToUse$Time,dataToUse$Sub_metering_2,type = "l",col = "red")
-lines(dataToUse$Time,dataToUse$Sub_metering_3,type = "l",col = "blue")
+
+plot(dataToUse$Time,dataToUse$Sub_metering_1,type = "l", col = "black", xlab = "", ylab = "Energy sub metering" )
+lines(dataToUse$Time,dataToUse$Sub_metering_2,type = "l",col = "red" )
+lines(dataToUse$Time,dataToUse$Sub_metering_3,type = "l",col = "blue" )
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd=2, col=c("black", "red", "blue"))
+
+# closing the graphical device
 dev.off()
