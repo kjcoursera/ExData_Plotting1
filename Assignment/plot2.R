@@ -17,7 +17,7 @@ dataToUse <- data[data$Date >= DATE1 & data$Date <= DATE2,]
 #opening the graphics device
 png("plot2.png", width=480, height=480)
 
-plot(dataToUse$Time , dataToUse$Global_active_power,type = "l" ,ylab = "Global Active Power (kilowatts)" )
+plot(dataToUse$Time , dataToUse$Global_active_power,type = "l" ,xlab =" ", ylab = "Global Active Power (kilowatts)" )
 
 # closing the graphical device
 dev.off()
